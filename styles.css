@@ -1,0 +1,281 @@
+/*Table of Contents
+1.Importing normalize
+2.Importing fonts
+3.Importing design from fontawesome
+4.setting the layout, background and common font for the page content
+5.adding icon to heading
+6.Styling the Headings
+7.The links to download the css and html file
+7.Individual styling
+8.Transition styling for the design selection and headers
+9.Styling the achor tags*/
+
+/*load normalize cdn*/
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css';
+
+/*loading fonts*/
+@import url('https://fonts.googleapis.com/css?family=Dosis|Oswald|PT+Sans|Roboto+Slab');
+
+/*LOAD FONTAWESOME*/
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+
+/*setting the layout, background and common fonts for the page content*/
+* {
+	box-sizing: border-box;
+}
+
+.page-wrapper{
+	width: 1200px;
+	margin: 0 auto;
+	font-family: 'Roboto Slab', 'arial', serif;
+	color: #fff;
+}
+
+#css-zen-garden{
+	background: url(images/bg.jpg) center fixed;
+	background-size: cover;
+}
+
+/*add icon to heading*/
+.intro h1:before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f185";
+	font-size: 2em;
+	color: red;
+	opacity: 0.5;
+	display: block;
+	text-align: center;
+}
+
+/*add to heading*/
+.summary a:hover{
+	text-transform: uppercase;
+}
+
+/*Styling the Headings*/
+.intro h1{
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Oswald', 'arial', sans-serif;
+	color: black;
+}
+
+.intro h2{
+	text-align: center;
+	color: orange;
+	font-family: 'PT Sans', 'arial', sans-serif;
+	color: black;
+}
+
+h3{	
+	font-family: 'PT Sans', 'arial', sans-serif;
+	color: black;
+}
+
+header{	
+	background: #fff;
+	width: 100%;
+	padding: 2em 0 2em 0;
+	font-family: 'Righteous', 'arial', cursive;
+}
+
+/*the links to download the css and html file*/
+.summary{
+	text-align: center;
+	padding-top: 3em;
+	padding-bottom: 2em;
+	color: #10000C;
+	font-size: 1.1em;
+}
+
+/*Individual stylings*/
+.preamble {
+	float: left;
+	width: 48.5%;
+	padding: 10px;
+	border: 5px solid #fff;		
+}
+
+.explanation {
+	float: left;
+	width: 51.5%;
+	padding: 10px;
+	border: 4px solid #fff;	
+}
+
+.explanation:after {
+	content: "";
+	clear: both;
+}
+
+.participation {
+	float: left;
+	width: 76%;
+	padding: 10px;
+	border: 4px solid #fff;
+}
+
+.benefits {
+	float: left;
+	width: 24%;
+	padding: 10px;
+	border: 2px solid #fff;
+}
+
+.requirements{
+	clear: both;
+	width: 100%;
+	padding: 10px;
+	text-align: justify;
+	border: 4px solid #fff;
+}
+
+.requirements:after {
+	content: "";
+	clear: both;
+}
+
+footer {
+	float: left;
+	padding: 4% 0 2% 0%;
+	width: 100%;
+	text-align: center;
+	display: block;
+	background-color: orange;
+	border: 4px solid #fff;
+}
+
+aside {
+	clear: both;
+	width: 40%;
+}
+
+.design-archives,.zen-resources{
+	margin-left: 70%;
+	width: 100%;
+	padding: 10px;
+	border: 4px solid #fff;
+}
+
+.design-selection{
+	margin-left: 70%;
+	width: 100%;
+	padding: 10px;
+	border: 4px solid #fff;
+}
+
+.design-archives h3,.zen-resources h3,.design-selection h3{
+	text-align: center;
+}
+
+/*Transitions*/
+.design-selection li  {
+	transition: width 1s;
+	text-decoration: none;
+	list-style-type: none;
+	line-height: 1.4em;
+	text-align: left;
+}
+
+.design-selection li:hover  {	
+	width: 300px;
+	text-align: center;
+	background-color: #8EE4AF;
+}
+
+/*Transitions headers*/
+.preamble h3,.explanation h3,.participation h3,.benefits h3,.requirements h3  {
+	transition: width 1s;
+	text-decoration: none;
+	list-style-type: none;
+	line-height: 1.4em;
+	text-align: left;
+}
+
+.preamble h3:hover,.explanation h3:hover,.participation h3:hover,.benefits h3:hover,.requirements h3:hover  {	
+	width: 300px;
+	text-align: center;
+	background-color: yellow;
+}
+
+.benefits h3:hover  {	
+	width: 250px;
+	text-align: center;
+	background-color: yellow;
+}
+
+/*Styling the achor tags*/
+.summary a:active,.summary a:link{ 
+	color: orange;
+	text-decoration: underline;
+}
+
+.summary a:visited{ 
+	color: blue;
+	text-decoration: none;
+}
+
+.summary a:hover{ 
+	color: red;
+	text-decoration: underline;
+	background-color: #FFF;
+}
+
+.participation a:link,.participation a:link,.requirements a:link,.design-archives a:link,.zen-resources a:link{ 
+	color: orange;
+	text-decoration: none;
+}
+
+.participation a:visited,.participation a:visited,.requirements a:visited,.design-archives a:visited,.zen-resources a:visited{ 
+	color: #FFCB9A;
+	text-decoration: none;
+}
+
+.participation a:active,.participation a:active,.requirements a:active,.design-archives a:active,.zen-resources a:active{ 
+	color: green;
+	text-decoration: none;
+}
+
+.participation a:hover,.participation a:hover,.requirements a:hover,.design-archives a:hover,.zen-resources a:hover  { 
+	color: blue;
+	text-decoration: underline;
+}
+
+footer a:link, footer a:visited,footer a:active { 
+	margin: 0 auto; 
+	text-decoration: none;
+	padding: 1.5em 1.5em 1.5em 1.5em;
+	color: black;
+}
+
+footer a:hover  { 
+	color: #E8A87C;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.design-archives a:link,.zen-resources a:link,.design-selection a:link{ 
+	color: orange;
+	text-decoration: none;
+}
+
+.design-archives a:visited,.zen-resources a:visited,.design-selection a:visited{ 
+	color: #FFCB9A;
+	text-decoration: none;
+}
+
+.design-archives a:active,.zen-resources a:active,.design-selection a:active{ 
+	color: green;
+	text-decoration: none;
+}
+
+.design-archives a:hover,.zen-resources a:hover,.design-selection a:hover  { 
+	color: red;
+	text-decoration: underline;
+}
+
+
+
+
+
+
